@@ -10,7 +10,7 @@
 
 * [Создание и запуск образа](#run)
 
-* [Код Docerfile](#code)
+* [Код Dockerfile](#code)
 
 ## Что такое Dockerfile <a name="dockerfile1"></a>
 
