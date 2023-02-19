@@ -36,8 +36,6 @@ Dockerfile - текстовый фаил, в котором находится �
 		MAINTAINER "Kto-to"
 
 
-> Пункт №2 необязательный
-
 3. Устанавливаем python3
 
 
@@ -54,10 +52,10 @@ Dockerfile - текстовый фаил, в котором находится �
 4. Копируем сам фаил hello_world.py
 
 
-		COPY HelloWorld.py /home/tutorial/hello_world.py
+		COPY hello_world.py /home/tutorial/hello_world.py
 
 
-5. Запускаем HelloWorld.py
+5. Запускаем hello_world.py
 
 
 		ENTRYPOINT ["/usr/bin/python3", "HelloWorld.py"]
@@ -89,9 +87,9 @@ Dockerfile - текстовый фаил, в котором находится �
 
 	WORKDIR /home
 
-	COPY HelloWorld.py /home/tutorial/HelloWorld.py
+	COPY hello_world.py /home/tutorial/hello_world.py
 
-	ENTRYPOINT ["/usr/bin/python3", "HelloWorld.py"]
+	ENTRYPOINT ["/usr/bin/python3", "hello_world.py"]
 
 
 	
