@@ -58,7 +58,7 @@ Dockerfile - текстовый фаил, в котором находится �
 5. Запускаем hello_world.py
 
 
-		ENTRYPOINT ["/usr/bin/python3", "HelloWorld.py"]
+		ENTRYPOINT ["/usr/bin/python3", "hello_world.py"]
 
 
 ## Создание и запуск образа <a name="run"></a>
