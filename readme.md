@@ -20,13 +20,13 @@
 1. Выбираем родительский образ 
 
 	
-	From python
+		From python
 
 
 2. Отмечаем кто написал инструкцию
 
 
-	MAINTAINER "Kto-to"
+		MAINTAINER "Kto-to"
 
 
 > Пункт №2 необязательный
@@ -34,26 +34,26 @@
 3. Устанавливаем python3
 
 
-	RUN apt-get update && \
-    	apt-get install -y python3
+		RUN apt-get update && \
+    		apt-get install -y python3
 
 
 4. Отмечаем рабочую среду
 
 
-	WORKDIR /home
+		WORKDIR /home
 
 
 4. Копируем сам фаил HelloWorld.py
 
 
-	COPY HelloWorld.py /home/tutorial/HelloWorld.py
+		COPY HelloWorld.py /home/tutorial/HelloWorld.py
 
 
 5. Запускаем HelloWorld.py
 
 
-	ENTRYPOINT ["/usr/bin/python3", "HelloWorld.py"]
+		ENTRYPOINT ["/usr/bin/python3", "HelloWorld.py"]
 
 
 ***
