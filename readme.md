@@ -1,71 +1,25 @@
-# СОЗДАНИЕ ОБРАЗА
+## ОПИСАНИЕ
 
 В данной статье описывается создание образа через Dockerfile. 
 
-## Содержание
-
-* [Что такое Dockerfile](#dockerfile1)
-
-* [Создание Dockerfile](#create)
-
-* [Создание и запуск образа](#run)
-
-* [Код Dockerfile](#code)
-
-## Что такое Dockerfile <a name="dockerfile1"></a>
-
-Dockerfile - текстовый фаил, в котором находится инструкция по созданию образа.
- Он необходим для автоматизации сборки, при которой выполняются последовательно
- команды пользователя, записанные им в инструкции.
-
-## Создание Dockerfile <a name="create"></a>
-
-Задача: Копировать и запустить файл hello_world.py
-
-Для начала создаём текстовый документ и запускаем его 
-
-1. Выбираем родительский образ 
-
-	
-		From python
+## ЗАПУСК
+Клонировать репозиторий 
 
 
-2. Копируем файл hello_world.py
+	git clone https://github.com/OREXkong/tutorial#code
 
 
-		COPY hello_world.py .
+собрать контейнер
 
 
-3. Запускаем hello_world.py
+	docker build -t python-test
 
 
-		ENTRYPOINT ["python", "hello_world.py"]
+Запустить его
 
 
-## Создание и запуск образа <a name="run"></a>
-
-Инструкция готова, остаётся создать образ и проверить запустив его
-
-Вводим в терминал, вписывая имя созданного образа
-	
-	docker build -t python-test .
-
-Как получится можно проверить образ, достаточно ввести 
-
-	docker run Obraz 
+	docker run python-test
 
 
-## Код Dockerfile <a name="code"></a>
-
-Вот как выглядит инструкция в целом:
-
-	FROM python
-
-	COPY hello_world.py .
-
-	ENTRYPOINT ["python", "hello_world.py"]
-
-
-	
 
 
