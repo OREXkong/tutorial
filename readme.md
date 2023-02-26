@@ -22,7 +22,7 @@ Dockerfile - текстовый фаил, в котором находится �
 
 Задача: Копировать и запустить файл hello_world.py
 
-Для начала создаём текстовый документ и запускаем его, к примеру, в блокноте
+Для начала создаём текстовый документ и запускаем его 
 
 1. Выбираем родительский образ 
 
@@ -30,35 +30,16 @@ Dockerfile - текстовый фаил, в котором находится �
 		From python
 
 
-2. Отмечаем кто написал инструкцию
+2. Копируем файл hello_world.py
 
 
-		MAINTAINER "Kto-to"
+		COPY hello_world.py .
 
 
-3. Устанавливаем python3
+3. Запускаем hello_world.py
 
 
-		RUN apt-get update && \
-    		apt-get install -y python3
-
-
-4. Отмечаем рабочую среду
-
-
-		WORKDIR /home
-
-
-4. Копируем сам фаил hello_world.py
-
-
-		COPY hello_world.py /home/tutorial/hello_world.py
-
-
-5. Запускаем hello_world.py
-
-
-		ENTRYPOINT ["/usr/bin/python3", "hello_world.py"]
+		ENTRYPOINT ["python", "hello_world.py"]
 
 
 ## Создание и запуск образа <a name="run"></a>
@@ -67,29 +48,22 @@ Dockerfile - текстовый фаил, в котором находится �
 
 Вводим в терминал, вписывая имя созданного образа
 	
-	docker build -t "Obraz" .
+	docker build -t python-test .
 
 Как получится можно проверить образ, достаточно ввести 
 
-	docker run "Obraz" 
+	docker run Obraz 
 
 
 ## Код Dockerfile <a name="code"></a>
 
 Вот как выглядит инструкция в целом:
 
-		FROM python
+	FROM python
 
-	MAINTAINER DANIL <89242489714@mail.ru>
+	COPY hello_world.py .
 
-	RUN apt-get update && \
-   	 apt-get install -y python3
-
-	WORKDIR /home
-
-	COPY hello_world.py /home/tutorial/hello_world.py
-
-	ENTRYPOINT ["/usr/bin/python3", "hello_world.py"]
+	ENTRYPOINT ["python", "hello_world.py"]
 
 
 	

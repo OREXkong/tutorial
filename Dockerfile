@@ -1,13 +1,5 @@
-FROM python
+FROM python:3.11.0
 
-MAINTAINER DANIL <89242489714@mail.ru>
+COPY hello_world.py .
 
-RUN apt-get update && \
-    apt-get install -y python3
-
-WORKDIR /home
-
-COPY HelloWorld.py /home/tutorial/HelloWorld.py
-
-ENTRYPOINT ["/usr/bin/python3", "HelloWorld.py"]
-
+ENTRYPOINT ["python", "./hello_world.py"]
