@@ -6,7 +6,8 @@
 Клонировать репозиторий 
 
 
-	git clone https://github.com/OREXkong/tutorial/blob/main/readme.md
+	git clone https://github.com/OREXkong/tutorial.git
+
 
 
 Cобрать контейнер
