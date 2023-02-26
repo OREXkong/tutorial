@@ -13,7 +13,7 @@
 Cобрать контейнер
 
 
-	docker build -t python-test
+	docker build -t python-test .
 
 
 Запустить его
