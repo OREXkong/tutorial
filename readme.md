@@ -9,7 +9,7 @@
 	git clone https://github.com/OREXkong/tutorial#code
 
 
-собрать контейнер
+Cобрать контейнер
 
 
 	docker build -t python-test
